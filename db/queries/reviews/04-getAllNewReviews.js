@@ -5,7 +5,7 @@ const getAllNewReviews = (db) => {
   FROM reviews
   JOIN products ON products.id = reviews.product_id
   WHERE display is false AND inactive is false
-  ORDER BY create_time, reviews.id DESC;`)
+  ORDER BY reviews.id DESC;`)
 }
 
 module.exports = { getAllNewReviews };
