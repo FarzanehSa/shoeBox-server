@@ -5,7 +5,7 @@ const getOrdersInfoByDateRange = (db, start, end) => {
     user_address AS address, user_city AS city
   FROM orders
   WHERE order_time >= $1 AND order_time <= $2
-  ORDER BY order_time;`, [start, end])
+  ORDER BY id DESC;`, [start, end])
 }
 
 module.exports = { getOrdersInfoByDateRange };
