@@ -13,7 +13,7 @@ CREATE TABLE reviews (
   comments TEXT NOT NULL,
   rating NUMERIC NOT NULL,
   display BOOLEAN  NOT NULL DEFAULT false,
-  create_time DATE NOT NULL DEFAULT NOW(),
+  create_time DATE NOT NULL DEFAULT NOW() - interval '8 hours',
   inactive BOOLEAN  NOT NULL DEFAULT false
 );
 

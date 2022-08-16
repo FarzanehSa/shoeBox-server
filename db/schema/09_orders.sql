@@ -12,6 +12,5 @@ CREATE TABLE orders (
   user_city VARCHAR(32) NOT NULL,
   user_postal_code VARCHAR(16) NOT NULL,
 
-  order_time DATE NOT NULL DEFAULT NOW()
-
+  order_time DATE NOT NULL DEFAULT NOW() - interval '8 hours'
 );
